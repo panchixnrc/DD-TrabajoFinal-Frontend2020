@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  width: 100%;
+  height: 204px;
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0) 56.77%,
+    #ffcb05 93.23%
+  );
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 65%;
+}
+
+.elipse {
+  position: absolute;
+  top: 40%;
+  animation: rotacion 2s linear infinite;
+}
+
+.loading {
+  position: absolute;
+  top: 48%;
+  animation: rotacion 2s linear infinite;
+}
+
+@keyframes rotacion {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
