@@ -26,6 +26,7 @@
 
 main {
   width: 100%;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,13 +38,13 @@ main {
 
 .elipse {
   position: absolute;
-  top: 40%;
+  top: 45%;
   animation: rotacion 2s linear infinite;
 }
 
 .loading {
   position: absolute;
-  top: 48%;
+  top: 53%;
   animation: rotacion 2s linear infinite;
 }
 
