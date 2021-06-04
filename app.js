@@ -9,8 +9,24 @@ for (let i = 0; i < 6; i++) {
     .then((data) => {
       return data.json();
     })
-    .then((json) => {
-      createPokemonCard(json);
+    .then((pokemonObj) => {
+      if (pokemonObj.base) {
+        createPokemonCard(pokemonObj);
+      } else {
+        fetch("https://app.pokemon-api.xyz/pokemon/random", {
+          headers: {
+            "content-type": "application/json",
+          },
+        })
+          .then((data) => {
+            return data.json();
+          })
+          .then((pokemonObj) => {
+            if (pokemonObj.base) {
+              createPokemonCard(pokemonObj);
+            }
+          });
+      }
     });
 }
 
@@ -22,6 +38,7 @@ function createPokemonCard(pokemonObj) {
   newCard.setAttribute("pokemonElement", pokemonObj.type[0]);
   newCard.setAttribute("pokemonNumber", `#${pokemonObj.id}`);
   newCard.setAttribute("pokemonImg", `${pokemonObj.thumbnail}`);
+  console.log(pokemonObj);
 
   container.appendChild(newCard);
 }
