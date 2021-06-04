@@ -38,6 +38,7 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .type {
@@ -73,16 +74,71 @@ h4 {
   width: 95px;
   height: 95px;
 }
+
+.bg-normal {
+  background: linear-gradient(180deg, #E5E5E5 0%, #FFFFFF 100%);
+}
+.bg-fighting {
+  background: linear-gradient(180deg, #FD9898 0%, #FFFFFF 100%);
+}
+.bg-flying {
+  background: linear-gradient(180deg, #FFFFFF 0%, #B3C8EA 100%);
+}
+.bg-poison {
+  background: linear-gradient(180deg, #34B550 0%, #2A7318 100%);
+}
+.bg-ground {
+  background: linear-gradient(180deg, #D6C28B 0%, #675628 100%);
+}
+.bg-rock {
+  background: linear-gradient(180deg, #D3D3D3 0%, #746D5A 100%);
+}
+.bg-bug {
+  background: linear-gradient(180deg, #34B550 0%, #BEFFAD 100%);
+}
+.bg-ghost {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D8A7E9 100%);
+}
+.bg-steel {
+  background: linear-gradient(180deg, #C4C4C4 0%, #C1CCDD 100%);
+}
+.bg-fire {
+  background: linear-gradient(180deg, #CF2828 0%, #FFDE52 100%);
+}
+.bg-water {
+  background: linear-gradient(180deg, #3CC7DA 0%, #186B85 100%);
+}
+.bg-grass {
+  background: linear-gradient(180deg, #9EDA3C 0%, #6F976E 100%);
+}
+.bg-electric {
+  background: linear-gradient(180deg, #F6BD20 0%, #FFFFFF 55.73%, #FFDE52 100%);
+}
+.bg-psychic {
+  background: linear-gradient(180deg, #3A7DE2 0%, #D8A7E9 100%);
+}
+.bg-ice {
+  background: linear-gradient(180deg, #FFFFFF 0%, #C5DBFF 55.73%, #E2E9F5 100%);
+}
+.bg-dragon {
+  background: linear-gradient(180deg, #9EDA3C 0%, #D6C28B 0.01%, #FFCB05 52.08%, #CA3030 100%);
+}
+.bg-dark {
+  background: linear-gradient(180deg, #518894 0.01%, #575756 100%);
+}
+.bg-fairy {
+  background: linear-gradient(180deg, #FF00C7 0.01%, #00FF75 49.48%, #0AC2C2 100%);
+}
 </style>
 
 <div class="poke-card-style">
 <div class="card-top">
   <div id="element" class="type">
     <div class="icons">
-      <img src="./components/poke-card/assets/img/icon-zap.png" alt="" />
+      <img src="" alt="" />
     </div>
   </div>
-  <h4 id="pokemonNumber">#333</h4>
+  <h4 id="pokemonNumber"></h4>
 </div>
 
 <img
@@ -99,77 +155,75 @@ h4 {
 
 const tipos = {
   normal: {
-    fondo: "linear-gradient(180deg, #E5E5E5 0%, #FFFFFF 100%);",
+    fondo: "bg-normal",
     icon: "./img/icons/icon-normal.png",
   },
   fighting: {
-    fondo: "linear-gradient(180deg, #FD9898 0%, #FFFFFF 100%);",
+    fondo: "bg-fighting",
     icon: "./img/icons/icon-fighting.png",
   },
   flying: {
-    fondo: "linear-gradient(180deg, #FFFFFF 0%, #B3C8EA 100%);",
+    fondo: "bg-flying",
     icon: "./img/icons/icon-flying.png",
   },
   poison: {
-    fondo: "linear-gradient(180deg, #34B550 0%, #2A7318 100%);",
+    fondo: "bg-poison",
     icon: "./img/icons/icon-poison.png",
   },
   ground: {
-    fondo: "linear-gradient(180deg, #D6C28B 0%, #675628 100%);",
+    fondo: "bg-ground",
     icon: "./img/icons/icon-ground.png",
   },
   rock: {
-    fondo: "linear-gradient(180deg, #D3D3D3 0%, #746D5A 100%);",
+    fondo: "bg-rock",
     icon: "./img/icons/icon-rock.png",
   },
   bug: {
-    fondo: "linear-gradient(180deg, #34B550 0%, #BEFFAD 100%);",
+    fondo: "bg-bug",
     icon: "./img/icons/icon-bug.png",
   },
   ghost: {
-    fondo: "linear-gradient(180deg, #FFFFFF 0%, #D8A7E9 100%);",
+    fondo: "bg-ghost",
     icon: "./img/icons/icon-ghost.png",
   },
   steel: {
-    fondo: "linear-gradient(180deg, #C4C4C4 0%, #C1CCDD 100%);",
+    fondo: "bg-steel",
     icon: "./img/icons/icon-steel.png",
   },
   fire: {
-    fondo: "linear-gradient(180deg, #CF2828 0%, #FFDE52 100%);",
+    fondo: "bg-fire",
     icon: "./img/icons/icon-fire.png",
   },
   water: {
-    fondo: "linear-gradient(180deg, #3CC7DA 0%, #186B85 100%);",
+    fondo: "bg-water",
     icon: "./img/icons/icon-water.png",
   },
   grass: {
-    fondo: "linear-gradient(180deg, #9EDA3C 0%, #6F976E 100%);",
+    fondo: "bg-grass",
     icon: "./img/icons/icon-grass.png",
   },
   electric: {
-    fondo: "linear-gradient(180deg, #F6BD20 0%, #FFFFFF 55.73%, #FFDE52 100%);",
+    fondo: "bg-electric",
     icon: "./img/icons/icon-zap.png",
   },
   psychic: {
-    fondo: "linear-gradient(180deg, #3A7DE2 0%, #D8A7E9 100%)",
+    fondo: "bg-psychic",
     icon: "./img/icons/icon-psychic.png",
   },
   ice: {
-    fondo: "linear-gradient(180deg, #FFFFFF 0%, #C5DBFF 55.73%, #E2E9F5 100%);",
+    fondo: "bg-ice",
     icon: "./img/icons/icon-ice.png",
   },
   dragon: {
-    fondo:
-      "linear-gradient(180deg, #9EDA3C 0%, #D6C28B 0.01%, #FFCB05 52.08%, #CA3030 100%);",
+    fondo: "bg-dragon",
     icon: "./img/icons/icon-dragon.png",
   },
   dark: {
-    fondo: "linear-gradient(180deg, #518894 0.01%, #575756 100%);",
+    fondo: "bg-dark",
     icon: "./img/icons/icon-dark.png",
   },
   fairy: {
-    fondo:
-      "linear-gradient(180deg, #FF00C7 0.01%, #00FF75 49.48%, #0AC2C2 100%);",
+    fondo: "bg-fairy",
     icon: "./img/icons/icon-fairy.png",
   },
 };
@@ -180,6 +234,25 @@ class PokeCard extends HTMLElement {
 
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = pokeCardTemplate;
+  }
+
+  get pokemonNumber() {
+    return this.shadowRoot.querySelector("#pokemonNumber").innerHTML;
+  }
+
+  set pokemonNumber(newPokemonNumber) {
+    this.shadowRoot.querySelector("#pokemonNumber").innerHTML =
+      newPokemonNumber;
+  }
+
+  get pokemonImage() {
+    return this.shadowRoot.querySelector("#image").src;
+  }
+
+  set pokemonImage(newPokemonImage) {
+    this.shadowRoot
+      .querySelector("#image")
+      .setAttribute("src", newPokemonImage);
   }
 
   get pokemonName() {
@@ -201,15 +274,14 @@ class PokeCard extends HTMLElement {
     const newTypeIcon = this.cardIconChanger(newPokemonElement);
     const newBackColor = this.cardColorChanger(newPokemonElement);
     this.shadowRoot.querySelector(".icons img").src = newTypeIcon;
-    this.shadowRoot.querySelector(".poke-card-style");
-
-    console.log(this.shadowRoot.querySelector(".poke-card-style").style);
+    this.shadowRoot
+      .querySelector(".poke-card-style")
+      .classList.add(newBackColor);
   }
 
   // Funcion para cambiar el color de la card segun el tipo de pokemon
   cardColorChanger(pokemonType) {
     let pokeType = pokemonType.toLowerCase();
-    console.log(pokeType);
     return tipos[pokeType].fondo;
   }
 
@@ -220,7 +292,8 @@ class PokeCard extends HTMLElement {
 
   connectedCallback() {
     this.pokemonName = this.getAttribute("pokemonName");
-    /* this.pokemonImage = this.getAttribute("pokemonImg"); */
+    this.pokemonNumber = this.getAttribute("pokemonNumber");
+    this.pokemonImage = this.getAttribute("pokemonImg");
     this.pokemonElement = this.getAttribute("pokemonElement");
   }
 }
