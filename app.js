@@ -1,4 +1,6 @@
 for (let i = 0; i < 6; i++) {
+  loading();
+
   fetch("https://app.pokemon-api.xyz/pokemon/random", {
     headers: {
       "content-type": "application/json",
@@ -9,7 +11,6 @@ for (let i = 0; i < 6; i++) {
     })
     .then((json) => {
       createPokemonCard(json);
-      i++;
     });
 }
 
@@ -23,4 +24,12 @@ function createPokemonCard(pokemonObj) {
   newCard.setAttribute("pokemonImg", `${pokemonObj.thumbnail}`);
 
   container.appendChild(newCard);
+}
+
+function loading() {
+  document.querySelector(".contenedor").classList.add("oculto");
+  setTimeout(() => {
+    document.querySelector(".contenedor").classList.remove("oculto");
+    document.querySelector("#loading").classList.add("oculto");
+  }, 2000);
 }

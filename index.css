@@ -55,3 +55,33 @@ poke-card {
   justify-content: center;
   margin-top: 0.5rem;
 }
+
+#loading {
+  position: absolute;
+  right: 25%;
+  top: 35%;
+}
+.loading {
+  position: absolute;
+  right: 20%;
+  top: 45%;
+  animation: rotacion 2s linear infinite;
+}
+.elipse {
+  position: relative;
+
+  animation: rotacion 2s linear infinite;
+}
+
+.oculto {
+  display: none !important;
+}
+
+@keyframes rotacion {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
